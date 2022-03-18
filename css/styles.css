@@ -6,6 +6,10 @@ body {
   color: rgb(92, 91, 91);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* =====================================
 ============ HEADER STYLES ===========*/
 
