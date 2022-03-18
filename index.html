@@ -1,59 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Website Project</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <header id="header">
-      <nav id="main-nav">
-        <ul>
-          <li class="active"><a href="http://">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div id="hero-content">
-        <h1 id="hero-title"><span>Marc</span> Sanchez</h1>
-        <p class="hero-description">
-          Graphic Designer &verbar; Web Designer &verbar; Software Engineer &verbar; QA Engineer
-        </p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marc A Sanchez | Web Designer | Front End Developer</title>
+  <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/reset.css">
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link rel="stylesheet" href="js/slick/slick.css">
+  <link rel="stylesheet" href="js/slick/slick-theme.css">
+  <link rel="stylesheet" href="css/styles.css">
+  </style>
+</head>
+<body>
+  <header> <!-- HEADER START-->
+    <!-- Navigation -->
+    <nav class="main-nav"> 
+      <!-- <a href="index.html"><img class="logo" src="imgs/logo.svg"></a> -->
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#footer">CONTACT</a></li>
+      </ul>
+    </nav>
+    <!-- Hero -->
+    <div id="hero">
+      <h1 class="hero-header">Marc Sanchez</h1>
+      <p class="header-description">Graphic Designer &verbar; Web Designer &verbar; Software Developer &verbar; QA Enginner</p>
+      <div class="hero-btns">
+        <div class="header-scroll">
+          <p>&lt;&lt;&lt;&lt; &ThickSpace; <span>Scroll</span> &ThickSpace; &gt;&gt;&gt;&gt;</p>
+        </div>
+        
+        <!-- <button class="portfolio-hero-btn"><a href="#services">Services</a></button>
+        <button class="contact-hero-btn"><a href="#footer">Contact Me</a></button> -->
       </div>
-    </header>
-    <!-- About Section -->
-    <section id="about">
-      <div class="section">
-        <h2 class="section-heading">About</h2>
-        <div class="section-heading-bar"></div>
-        <div class="section-content">
-          <img src="images/colton-sturgeon-odKeTFsBDgE-unsplash.jpg" alt="Profile Pic" />
-          <h3>SO<span> PASSIONATE</span> ABOUT WHAT I DO</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis ut sunt eaque, laborum voluptatemquos
-            accusantium vero id esse tempora repudiandae nulla ea nemo, temporibus veniam voluptate asperiores odit
-            repellat dolores, voluptatibus in porro sequi? Modi, quam omnis labore voluptate sunt velit maxime tenetur
-            assumenda sapiente sed voluptatum vel, debitis aperiam eaque atque aut non repellat. Ut corrupti fugit
-            excepturi repellat consequuntur itaque alias quasi, odio ea! Culpa, voluptatem dignissimos eos perspiciatis
-            architecto eaque quibusdam explicabo nulla ut in ab ipsa aperiam eligendi repudiandae inventore, consectetur
-            aspernatur veniam optio. Aperiam unde distinctio, fugiat dignissimos consectetur deleniti nam consequatur
-            voluptas quidem!
-          </p>
-          <ul class="cv-contact">
-            <li><a href="#">CV</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+    </div>
+  </header> <!-- HEADER END-->
+
+  <section id="about">
+    <img src="imgs/profile-pic3.jpg" class="profile-pic">
+    <p class="about-paragraph">Super <span>Passionate</span> About What I Do</p>
+    <p class="section-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus minima omnis veritatis delectus dolorum similique sint expedita libero nisi iure ab, culpa aliquid corrupti consectetur enim numquam laboriosam obcaecati explicabo perferendis aspernatur cupiditate natus qui facere? Quod dicta placeat quidem blanditiis dolore, consectetur fugiat error ex temporibus eveniet recusandae aut dolor, laborum amet explicabo.</p>
+    <div class="contact">
+      <!-- <a href="imgs/pdfs/marc_sanchez_resume.pdf" download>Download Resume</a>  -->
+      <!-- <a href="#"><i class="fab fa-twitter"></i> </a> -->
+      <!-- <a href="https://www.linkedin.com/in/marc-a-sanchez/" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+    </div>
+    <p class="section-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti nobis magni itaque, rem alias eum tempore aperiam dolores repellendus! Sint velit magnam, ea molestiae, maxime sunt eos enim ipsum doloribus temporibus tempora impedit totam officia laborum saepe excepturi! Molestiae est ea pariatur dolorem, optio id alias similique vel nisi vero?</p>
+    <!-- slides go here-->
+  <div class="slides">
+    <div class="review">
+      <img src="imgs/tech-icons/HTML5.png" alt="" class="HTML5" />
+    </div><!--/1-->
+    <div class="review">
+      <img src="imgs/tech-icons/css3.png" alt="" class="CSS3" />
+    </div><!--/2-->
+    <div class="review">
+      <img src="imgs/tech-icons/sass.png" alt="" class="SASS" />
+    </div><!--/3-->
+    <div class="review">
+      <img src="imgs/tech-icons/bootstrap.png" alt="" class="Bootstrap" />
+    </div><!--/4-->
+    <div>
+      <img src="imgs/tech-icons/js.png" alt="" class="JavaScript" />
+    </div><!--/5-->
+    <div>
+      <img src="imgs/tech-icons/jquery.png" alt="" class="JQuery" />
+    </div><!--/6-->
+    <div>
+      <img src="imgs/tech-icons/cypress.png" alt="" class="Cypress" />
+    </div><!--/7-->
+    <div>
+      <img src="imgs/tech-icons/github.png" alt="" class="GitHub" />
+    </div><!--/8-->
+    <div>
+      <img src="imgs/tech-icons/sql.png" alt="" class="SQL" />
+    </div><!--/9-->
+    <div>
+      <img src="imgs/tech-icons/photoshop.svg" alt="" class="Adobe Photoshop" />
+    </div><!--/10-->
+    <div>
+      <img src="imgs/tech-icons/illustrator.svg" alt="" class="Adobe Illustrator" />
+    </div><!--/11-->
+    <div>
+      <img src="imgs/tech-icons/indesign.svg" alt="" class="Adobe Indesign" />
+    </div><!--/12-->
+    <div>
+      <img src="imgs/tech-icons/xd.svg" alt="" class="Adobe XD" />
+    </div><!--/13-->
+  </div>
+    
+    
+  </section>
+
+  <div class="parallax-img"></div>
+
+  <section id="portfolio">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-paragraph">Below are a handful of design projects that I have worked on recently. If you would like to see more of my work, please <a href="#footer">contact me</a>.</p>
+
+    <div class="row">
+      <div class="column">
+        <img class="project-image" src="imgs/portfolio/opeltSanchezWedding.jpg" alt="Opelt Sanchez Wedding">
+        <div class="project-ctas">
+          <a href="#" class="project-btns" target="_blank">Github</a>
+          <!-- <a href="#" class="project-btns">Info</a> -->
+          <a href="#" class="project-btns demo-btn" target="_blank">Visit WebSite</a>
         </div>
       </div>
-    </section>
+      <div class="column">
+        <img class="project-image" src="imgs/portfolio/infinityMetalMarble.jpg" alt="Infinity Metal and Marble Restoration">
+        <div class="project-ctas">
+          <a href="#" class="project-btns" target="_blank">Github</a>
+          <!-- <a href="#" class="project-btns">Info</a> -->
+          <a href="https://marcsanchez1.github.io/infinity/" class="project-btns demo-btn" target="_blank">Visit WebSite</a>
+        </div>
+      </div>
+      <div class="column">
+        <img class="project-image" src="imgs/portfolio/burgerNation.jpg" alt="Burger Nation">
+        <div class="project-ctas">
+          <a href="#" class="project-btns" target="_blank">Github</a>
+          <!-- <a href="#" class="project-btns">Info</a> -->
+          <a href="https://marcsanchez1.github.io/burgernation/" class="project-btns demo-btn" target="_blank">Visit WebSite</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
 
-    <script src="js/script.js"></script>
-  </body>
+  <section id="services">
+    <h2 class="section-title">Services</h2>
+    <p class="section-paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, saepe quos ab recusandae optio quam impedit distinctio fugiat est debitis delectus autem nisi laboriosam quibusdam.</p>
+
+    <div class="row">
+      <div class="column">
+        <div class="services">
+          <i class="fab fa-adobe"></i>
+          <h3>Web Design</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, saepe quos ab recusandae optio quam impedit distinctio fugiat est debitis delectus autem nisi laboriosam quibusdam.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="services">
+          <i class="fas fa-code"></i>
+          <h3>Web Development</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, saepe quos ab recusandae optio quam impedit distinctio fugiat est debitis delectus autem nisi laboriosam quibusdam.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="services">
+          <i class="fas fa-desktop"></i>
+          <h3>Graphic Design</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, saepe quos ab recusandae optio quam impedit distinctio fugiat est debitis delectus autem nisi laboriosam quibusdam.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="services">
+          <i class="far fa-newspaper"></i>
+          <h3>Printing</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, saepe quos ab recusandae optio quam impedit distinctio fugiat est debitis delectus autem nisi laboriosam quibusdam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-paragraph">Please contact me to discuss employment, partnership and project opportunities.</p>
+    <footer>
+      <div class="social-media">
+        <a href="#"><span class="contact-label"><i class="fas fa-envelope"></i></span></a>
+        <!-- <a href="https://twitter.com/MarcASanchez1" target="_blank"><span class="contact-label"><i class="fab fa-twitter"></i></span> </a> -->
+        <a href="#" target="_blank"><span class="contact-label"><i class="fab fa-linkedin"></i></span></a></p>
+      </div>
+      
+      <div class="contact-form">
+        <script type="text/javascript" src="https://form.jotform.com/jsform/201826436070147"></script>
+        <!-- <fieldset>
+          <form action="#" method="POST">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Required" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Required" required>
+
+            <label for="phone">Phone</label>
+            <input type="number" id="phone" name="phone" placeholder="Required" required>
+            
+            <label for="comment">Comment</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+          </form>
+          <button type="submit" class="submit-btn">Submit</button>
+        </fieldset> -->
+      </div>
+    </footer>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/slick/slick.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
 </html>

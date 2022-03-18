@@ -1,202 +1,569 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "Roboto", sans-serif;
-  line-height: 1.25;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgb(92, 91, 91);
 }
 
-/* Main styles */
-a {
-  text-decoration: none;
-}
+/* =====================================
+============ HEADER STYLES ===========*/
 
-img {
-  width: 100%;
-}
-
-/* Header content */
 header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: url("/images/joshua-earle-GO2atRL73uE-unsplash.jpg") no-repeat center;
+  background: url("/imgs/joshua-earle-GO2atRL73uE-unsplash.jpg") no-repeat center center;
   background-size: cover;
-  background-attachment: fixed;
-  position: relative;
   height: 100vh;
+  position: relative;
 }
 
-header nav ul {
-  display: flex;
-}
-
-header nav ul li {
-  list-style: none;
-  color: #fff;
-}
-header nav ul li:last-child {
-  padding-right: 0;
-}
-
-header nav ul li a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  transition: 0.15s ease-in-out;
-  padding: 20px 25px;
-  display: block;
-}
-
-header nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-#logo {
-  color: #fff;
-}
-
-#hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 0 30px;
-}
-
-h1#hero-title {
-  font-family: "Play", sans-serif;
-  color: #fff;
-  font-size: 5rem;
-  letter-spacing: 0.25rem;
-  text-shadow: 1px 1px 4px #000;
-  margin: 0;
-  line-height: 0.85;
-}
-
-#hero-content p.hero-description {
-  color: rgba(255, 255, 255, 0.5);
-  letter-spacing: 0.15rem;
-  text-transform: uppercase;
-  margin-top: 10px;
-}
-
-header::before {
+header:before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 header * {
+  z-index: 10;
+}
+
+/* Navigation styles */
+nav.main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  padding: 20px;
+}
+
+nav.main-nav ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+nav.main-nav ul li a {
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  transition: all 0.25s ease-in-out;
+}
+
+nav.main-nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.is-sticky .main-nav {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 4px #000;
+  transition: 1s ease-in-out;
   z-index: 1;
 }
 
-/* Section Styles */
-section {
-  display: block;
+img.logo {
+  filter: invert(100%);
   width: 100%;
-  padding: 60px 0;
+  align-self: center;
 }
 
-.section {
+/* Media Queries for navigation */
+@media (min-width: 767px) {
+  nav.main-nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  nav.main-nav ul {
+    align-self: center;
+    margin-top: 0;
+  }
+}
+header {
+  background-attachment: fixed;
+}
+
+/* Hero styles */
+#hero {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-h2.section-heading {
-  font-size: 3rem;
-}
-
-.section-heading-bar {
-  content: "";
-  display: block;
-  height: 6px;
-  left: 0;
-  position: relative;
-  right: 0;
-  width: 150px;
-  margin: 10px 0 30px;
-  background-color: #000;
-}
-
-.section-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.section-content img {
-  width: 100%;
-  margin-bottom: 40px;
-}
-
-/* About Section */
-#about {
-  background: #000;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
   color: #fff;
+  padding: 0 40px;
 }
 
-#about .section-heading-bar {
-  background-color: #fff;
-}
-
-#about .section-content h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-#about .section-content h3 span {
+#hero h1.hero-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 960px;
+  line-height: 1.4;
   font-family: "Play", sans-serif;
-  font-weight: bold;
+  font-size: 3.5em;
+  font-weight: 700;
+  text-shadow: 1px 1px 10px #ff0000;
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+}
+
+#hero p.header-description {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+}
+
+#hero .header-scroll p {
+  transform: rotate(-90deg);
+  margin-top: 300px;
+  opacity: 0.5;
+}
+
+#hero .header-scroll p span {
   color: #ff0000;
+}
+
+/* Hero buttons */
+.hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#hero button a {
+  color: rgb(255, 255, 255);
+}
+.hero-btns button.portfolio-hero-btn,
+.hero-btns button.contact-hero-btn {
+  width: 250px;
+  padding: 20px;
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+  margin: 10px 15px;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  transition: 0.25s ease-in-out;
+}
+
+button.portfolio-hero-btn {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+button.portfolio-hero-btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+button.contact-hero-btn {
+  background: rgb(201, 5, 5);
+}
+
+button.contact-hero-btn:hover {
+  background: rgba(201, 5, 5, 0.5);
+}
+
+/* =========== Media Queries for hero ============ */
+@media (min-width: 767px) {
+  #hero {
+    margin: 0;
+  }
+
+  #hero h1.hero-header {
+    font-size: 5em;
+    margin-top: 100px;
+  }
+
+  .hero-btns {
+    flex-direction: row;
+  }
+}
+
+/* =====================================
+============ SECTION STYLES ===========*/
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+}
+
+section h2.section-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  line-height: 28px;
+}
+
+section p.section-paragraph {
+  max-width: 750px;
+  color: rgba(0, 0, 0, 0.4);
+  margin: 10px;
+  text-align: center;
+  font-size: 1.125em;
+}
+
+/* About me profile img styles */
+#about img.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  margin-top: 10px;
+}
+
+section#about,
+section#services {
+  background: rgb(231, 230, 230);
+}
+
+#about p.about-paragraph {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding: 20px;
+  margin: 10px 0;
+  text-align: center;
+  border-radius: 3px;
+  max-width: 800px;
+}
+
+#about p.about-paragraph span {
+  color: #ff0000;
+  font-weight: bold;
   border-bottom: 2px solid #ff0000;
   border-top: 2px solid #ff0000;
   padding: 5px 0;
-  margin: 0 5px;
 }
 
-#about .section-content ul {
+.contact .fab {
+  margin: 5px;
+  font-size: 1.3em;
+}
+
+.contact a {
+  color: rgb(201, 5, 5);
+  transition: all 0.25s ease-in-out;
+}
+
+.contact a:hover {
+  color: rgba(201, 5, 5, 0.5);
+}
+
+/* Row and Column styles */
+.row {
   display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
-  /* width: 100%; */
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1280px;
+  padding: 15px;
+  margin-top: 20px;
 }
 
-#about ul li {
-  list-style: none;
-  color: #fff;
-  flex: 1;
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.column h3.column-titles {
+  font-size: 1.2em;
+  font-weight: 700;
   text-align: center;
-  font-size: 1.5rem;
-  margin: 15px;
+  margin: 20px 0 15px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
-#about ul li a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
+/* Font awesome icons */
+i.fas.fa-code,
+i.fab.fa-adobe {
+  color: rgb(201, 5, 5);
+}
+
+/* Tech imgs in About Me section */
+
+#tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#tech-icons img {
+  height: 100px;
+  padding: 15px;
+  align-self: center;
+}
+
+.slides {
+  width: 100%;
+  margin: 50px auto;
+}
+
+.slides img {
+  height: 100px;
+}
+.slick-dots li button:before {
+  font-size: 36px;
+  margin-top: 30px;
+}
+
+/* =========== Media Queries for Rows and Columns styles ============ */
+@media (min-width: 767px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .column {
+    padding: 10px;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .column {
+    width: 33%;
+  }
+}
+
+/* =====================================
+========== PARALAX IMG STYLES =========*/
+
+.parallax-img {
+  background: url("https://images.unsplash.com/photo-1547027072-332f09bd6bb3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80")
+    no-repeat center;
+  background-size: cover;
+  height: 300px;
+  filter: contrast(100%);
+}
+
+@media (min-width: 767px) {
+  .parallax-img {
+    background-attachment: fixed;
+  }
+}
+
+/* =====================================
+========= PROJECT SECTION STYLES ======*/
+
+#portfolio .section-paragraph a {
+  color: rgb(201, 5, 5);
+  transition: all 0.25s ease-in-out;
+}
+
+#portfolio .section-paragraph a:hover {
+  color: rgba(201, 5, 5, 0.5);
+}
+
+img.project-image {
+  border-radius: 3px;
+  border-top: 10px solid rgb(231, 230, 230);
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+img.project-image::before {
+  background: #000;
+}
+
+.project-image:hover {
+  opacity: 0.8;
+}
+
+/* Buttons styles for project cards */
+.project-ctas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+a.project-btns {
+  align-self: center;
+  text-align: center;
+  padding: 5px 10px;
+  margin-right: 5px;
+  flex: 1;
+  background: none;
+  border: 1px solid rgb(201, 5, 5);
+  border-radius: 3px;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  outline: none;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
+a.project-btns:hover {
+  font-weight: 700;
+}
+
+a.demo-btn {
+  background: rgb(201, 5, 5);
+  color: #fff;
+  flex: 2;
+  margin-right: 0;
+  letter-spacing: 0.1em;
   transition: 0.15s ease-in-out;
-  padding: 20px 25px;
-  display: block;
-  border: 1px solid #fff;
 }
 
-#about ul li a:hover {
-  background: rgba(255, 0, 0, 0.15);
+a.demo-btn:hover {
+  background: rgba(201, 5, 5, 0.5);
 }
+
+/* =======================================
+========= SERVICES SECTION STYLES ======*/
+
+.services {
+  text-align: center;
+}
+
+section#services .fas,
+section#services .fab,
+section#services .far {
+  font-size: 2.5em;
+  color: rgb(201, 5, 5);
+  margin-bottom: 15px;
+  transition: all 0.1s ease-in-out;
+}
+
+section#services .fas:hover,
+section#services .fab:hover,
+section#services .far:hover {
+  color: rgba(201, 5, 5, 0.5);
+}
+
+section#services h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+/* =====================================
+========= FOOTER SECTION STYLES ======*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 680px;
+}
+
+footer form label {
+  display: block;
+  margin-top: 15px;
+}
+
+form {
+  width: 100%;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid rgb(201, 5, 5);
+  border-radius: 3px;
+  outline: none;
+  padding: 10px;
+  font-size: 1em;
+  transition: all 0.15s ease-in-out;
+}
+
+input {
+  height: 35px;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+  background: rgba(201, 5, 5, 0.1);
+}
+
+::placeholder {
+  text-align: right;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.875em;
+}
+
+.submit-btn {
+  background: rgb(201, 5, 5);
+  width: 100%;
+  padding: 15px 30px;
+  margin: 25px auto 0;
+  color: rgb(255, 255, 255);
+  font-size: 1.5em;
+  text-transform: uppercase;
+  border: 2px solid rgba(201, 5, 5, 0.5);
+  border-radius: 3px;
+  transition: background 0.25s ease-in-out;
+}
+
+.submit-btn:hover {
+  background: rgba(201, 5, 5, 0.5);
+}
+
+.back-to-home-btn:hover {
+  background: rgba(201, 5, 5, 0.5);
+}
+
+.back-to-home-btn {
+  background: rgb(201, 5, 5);
+  color: #fff;
+  padding: 15px 30px;
+  margin-top: 20px;
+  border: 2px solid rgba(201, 5, 5, 0.5);
+  border-radius: 3px;
+  transition: background 0.25s ease-in-out;
+}
+
+.social-media {
+  text-align: center;
+  margin: auto;
+}
+
+.social-media span.contact-label {
+  font-weight: 700;
+  font-size: 2.3em;
+}
+
+.social-media a {
+  color: rgb(92, 91, 91);
+  font-size: 1.2em;
+}
+
+.social-media .fas,
+.social-media .fab {
+  color: rgb(201, 5, 5);
+  margin: 0 15px;
+  transition: all 0.1s ease-in-out;
+}
+
+.fas:hover,
+.fab:hover,
+.far:hover {
+  color: rgba(201, 5, 5, 0.5);
+}
+/* =========== Media Queries for Rows and Columns styles ============ */
+/* @media (min-width:767px) {
+
+    .contact-form {
+      flex: 2;
+      margin: auto;
+    }
+
+    .social-media {
+      width: 50%;
+    }
+    
+  } */
