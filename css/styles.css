@@ -29,7 +29,7 @@ header:before {
 }
 
 header * {
-  z-index: 10;
+  z-index: 1;
 }
 
 /* Navigation styles */
@@ -39,6 +39,7 @@ nav.main-nav {
   align-items: center;
   color: #fff;
   padding: 20px;
+  z-index: 2;
 }
 
 nav.main-nav ul {
@@ -122,12 +123,18 @@ header {
 
 #hero .header-scroll p {
   transform: rotate(-90deg);
-  margin-top: 300px;
+  margin-top: 250px;
   opacity: 0.5;
+  transition: 0.15s ease-in-out;
 }
 
 #hero .header-scroll p span {
   color: #ff0000;
+}
+
+#hero .header-scroll p:hover {
+  opacity: 1;
+  font-weight: bold;
 }
 
 /* Hero buttons */
@@ -178,11 +185,11 @@ button.contact-hero-btn:hover {
 
   #hero h1.hero-header {
     font-size: 5em;
-    margin-top: 100px;
+    margin-top: 150px;
   }
 
-  .hero-btns {
-    flex-direction: row;
+  #hero p.header-description {
+    font-size: 1.25rem;
   }
 }
 
